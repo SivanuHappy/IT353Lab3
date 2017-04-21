@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>LinkedU - Student Search</title>
+    </h:head>
+    <h:body>
+        <h2>Student Search Results</h2>
+        <p:dataTable id="empTableID" value="#{searchController.studentsList}" var="aRow">
+            <p:column headerText="First Name">
+                <p:commandLink value="#{aRow.firstName} #{aRow.lastName}" action="#{studentProfileController.loadProfile(aRow.userID)}"/>
+                <a href="./studentProfile.xhtml?userid=#{aRow.userID}"><h:outputText value="#{aRow.firstName}"/></a>
+            </p:column>
+            <p:column headerText="Last Name">
+                <h:outputText value="#{aRow.lastName}"/>
+            </p:column>
+            <p:column headerText="User ID">
+                <h:outputText value="#{aRow.userID}"/>
+            </p:column>
+        </p:dataTable>
+    </h:body>
+</html>
+
