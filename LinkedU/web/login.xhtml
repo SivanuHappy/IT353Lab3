@@ -9,6 +9,7 @@
     </h:head>
     <h:body>
         <h:form>
+            <p:fieldset legend="Login" style="margin-bottom:20px">
             <p:outputLabel value="#{accountController.errorMessage}" style="color:red"/>
             <table>
             <tr><td>User ID: </td><td><p:inputText id="uid" value="#{accountController.loginModel.userID}" label="UserID"/></td></tr>
@@ -17,6 +18,7 @@
             </p:password></td></tr>
             </table>
             <br/><p:commandButton id="submitID" value="Log In" action="#{accountController.logIn()}"/>
+            </p:fieldset>
         </h:form>
     </h:body>
 </html>
