@@ -8,18 +8,13 @@ package Controller;
 import DAO.ApplydaoImpl;
 import javax.faces.bean.SessionScoped;
 import Model.Apply;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.InputStream;
 import org.primefaces.event.FlowEvent;
 import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
 import javax.annotation.PostConstruct;
 import javax.faces.bean.ManagedBean;
-import javax.faces.context.FacesContext;
 import javax.mail.Part;
 
 
