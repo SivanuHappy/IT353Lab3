@@ -47,7 +47,7 @@ public class AccountController implements Serializable {
     private String confirm;
 
     /**
-     * Creates a new instance of AccountController
+     * Creates a new instance of  AccountController
      */
     public AccountController() {
         if (loginModel == null) {
